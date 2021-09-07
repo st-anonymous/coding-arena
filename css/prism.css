@@ -31,13 +31,13 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-	background: hsl(0, 0%, 8%); /* #141414 */
+	background: hsl(238deg 70% 20%);
 }
 
 /* Code blocks */
 pre[class*="language-"] {
 	border-radius: .5em;
-	border: .3em solid hsl(0, 0%, 33%); /* #282A2B */
+	/* border: .3em solid hsl(0, 0%, 33%); #282A2B */
 	box-shadow: 1px 1px .5em black inset;
 	margin: .5em 0;
 	overflow: auto;
@@ -358,13 +358,13 @@ div.code-toolbar > .toolbar > .toolbar-item > button {
 div.code-toolbar > .toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar > .toolbar-item > button,
 div.code-toolbar > .toolbar > .toolbar-item > span {
-	color: #bbb;
-	font-size: .8em;
-	padding: 0 .5em;
-	background: #f5f2f0;
-	background: rgba(224, 224, 224, 0.2);
-	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-	border-radius: .5em;
+	color: #000;
+    font-size: 1em;
+    padding: .25em 0.75em;
+    background: #ffffff;
+    /* background: rgba(224, 224, 224, 0.2); */
+    box-shadow: 0 2px 0 0 rgb(0 0 0 / 20%);
+    border-radius: .75em;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,
