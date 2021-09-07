@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 *{
     scroll-behavior: smooth;
 }
@@ -28,34 +28,3 @@
 .toolbar-item>span{
     display: none;
 }
-=======
-*{
-    scroll-behavior: smooth;
-}
-#carousel{
-    margin: 25px auto;
-}
-#welcome{
-    max-width: 100%;
-    margin: 0;
-    padding: 1rem 10rem;
-}
-.bodypart li{
-    font-size: large;
-    font-weight: bold;
-    padding: 1rem;
-}
-.bodypart2 li{
-    list-style: none;
-}
-.toolbar-item>button:hover{
-    border: 2px solid white !important;
-    padding: 0px 5px !important;
-    border-radius: 15px !important;
-    color: black !important;
-    background-color: white !important;
-}
-.toolbar-item>span{
-    display: none;
-}
->>>>>>> fd984f8 (test3)
