@@ -71,6 +71,69 @@ int main(){
 }
                 </code></pre>
             </li>
+            <li><h4>Merge Shot Algorithm</h4>
+                <pre><code class="language-c++">
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+void merge(int arr[], int l, int m, int r){
+    int i = l, j = m+1, k = 0;
+    int temp[r-l+1];
+    while(i&lt;=m && j&lt;=r){
+        if(arr[i] &gt; arr[j]){
+            temp[k] = arr[j];
+            j++;
+            k++;
+        }
+        else{
+            temp[k] = arr[i];
+            i++;
+            k++;
+        }
+    }
+    while(i&lt;=m){
+        temp[k] = arr[i];
+        i++;
+        k++;
+    }
+    while(j&lt;=r){
+        temp[k] = arr[j];
+        j++;
+        k++;
+    }
+    for(int i=l; i&lt;=r; i++){
+        arr[i] = temp[i-l];
+    }
+}
+
+void mergeshot(int arr[], int l, int r){
+    if(r &lt;= l){
+        return;
+    }
+    int m = (l+r)/2;
+    mergeshot(arr, l, m);
+    mergeshot(arr, m+1, r);
+    merge(arr, l, m, r);
+}
+
+int main(){
+    int n;
+    cin &gt;&gt; n;
+    int arr[n];
+    int i = 0;
+    while(i&lt;n){
+        cin &gt;&gt; arr[i];
+        i++;
+    }
+    mergeshot(arr, 0, n-1);
+    i = 0;
+    while(i&lt;n){
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+        i++;
+    }
+    return 0;
+}
+                </code></pre>
+            </li>
         </ul>
     </div>
     <!-- Footer -->
