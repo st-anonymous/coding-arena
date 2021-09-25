@@ -71,7 +71,7 @@ int main(){
 }
                 </code></pre>
             </li>
-            <li><h4>Merge Shot Algorithm</h4>
+            <li><h4>MergeShot Algorithm</h4>
                 <pre><code class="language-c++">
 #include &lt;bits/stdc++.h&gt;
 using namespace std;
@@ -129,6 +129,48 @@ int main(){
     while(i&lt;n){
         cout &lt;&lt; arr[i] &lt;&lt; " ";
         i++;
+    }
+    return 0;
+}
+                </code></pre>
+            </li>
+            <li><h4>QuickSort Algorithm</h4>
+                <pre><code class="language-c++">
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int pivot(int arr[], int l, int r){
+    int i=l;
+    int j=l;
+    for(i; i&lt;=r; i++){
+        if(arr[i]&lt;=arr[r]){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j++;
+        }
+    }
+    return j-1;
+}
+void quicksort(int arr[], int l, int r){
+    if(l&gt;=r){
+        return;
+    }
+    int p = pivot(arr, l, r);
+    quicksort(arr, l, p-1);
+    quicksort(arr, p+1, r);
+    return;
+}
+int main(){
+    int n;
+    cin &gt;&gt; n;
+    int arr[n];
+    int i=0;
+    for(i; i&lt;n; i++){
+        cin &gt;&gt; arr[i];
+    }
+    quicksort(arr, 0, n-1);
+    for(i=0; i&lt;n; i++){
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
     }
     return 0;
 }
